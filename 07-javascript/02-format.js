@@ -1,10 +1,15 @@
 const formatItems = (input) => {
   // return a string of the concatenated numbers, separated by commas and with three digits after the decimal point
-
-  // for reference, see the MDN Number page:
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
-
-  return input;
+  let str = "";
+  let idx = 0;
+  for (const inp of input) {
+    str += `${inp.toFixed(3)}`;
+    idx++;
+    if (idx < input.length) {
+      str += `, `;
+    }
+  }
+  return str;
 };
 
 console.log(formatItems([1, 4, 17, 26, 41]));
