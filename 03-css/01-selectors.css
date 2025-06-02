@@ -8,14 +8,42 @@
   --violet: #9400d3;
 }
 
-/* Use attribute selectors for the first part of the exercise */
-
 li[class] {
-  color: var(--red);
+  color: var(--teal);
 }
 
-/* Use descendant, child, and sibling selectors for the second part */
+li[class="dog"] {
+  color: var(--magenta);
+}
+
+li[id="cat"] {
+  color: var(--teal);
+}
+
+li[class="parrot"] {
+  color: var(--teal);
+}
+
+li[class="donkey"] {
+  color: var(--royalblue);
+}
+
+li[class="hedgehog"] {
+  color: var(--magenta);
+}
+
+li[class="cat dog parrot"] {
+  color: var(--royalblue);
+}
 
 section li {
-  color: var(--green);
+  color: var(--teal);
+}
+
+.first ~ li {
+  color: var(--darkmagenta);
+}
+
+.second + li {
+  color: var(--royalblue);
 }

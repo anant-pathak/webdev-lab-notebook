@@ -1,6 +1,59 @@
-@media (min-width: 1024px) {
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.main {
+  padding: 5px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: var(--white);
+}
+
+body {
+  background: var(--purple);
+  color: var(--white);
+}
+
+@media (min-width: 1001px) {
   body {
     background: var(--green);
     color: var(--white);
+  }
+  .main {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 400px) {
+  nav ul li {
+    width: 100%;
+  }
+  .main {
+    margin-top: 180px;
+  }
+}
+@media (min-width: 401px) and (max-width: 1000px) {
+  body {
+    background: var(--orange);
+    color: var(--black);
+  }
+  .main {
+    margin-top: 50px;
   }
 }
